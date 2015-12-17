@@ -235,11 +235,7 @@ def motionHandler(evt) {
                     turnOnDimmers()
                 }
             } else if (coldOk != true && sunOk == true) {
-                log.debug "Heaters and dimmers will turn ON because $motionSensor detected motion between sunset and sunrise..."
-                if (heaters != null && heaters != "") {
-                    log.debug "Heaters: $heaters will turn ON..."
-                    turnOnHeaters()
-                }
+                log.debug "dimmers will turn ON because $motionSensor detected motion between sunset and sunrise. "  
                 if (dimmers != null && dimmers != "") {
                     log.debug "Dimmers: $dimmers will turn ON..."
                     turnOnDimmers()
