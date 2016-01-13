@@ -38,7 +38,7 @@ metadata {
 	tiles {
 		standardTile("door", "device.door", width: 2, height: 2) {
 			state("unknown", label:'${name}', action:"door control.close",  icon:"st.doors.garage.garage-open",    backgroundColor:"#ffa81e", nextState: "closing")
-			state("closed",  label:'${name}', action:"door control.open",   icon:"st.doors.garage.garage-closed",  backgroundColor:"#79b821", nextState: "opening")
+			state("closed",  label:'${name}', action:"door control.open",   icon:"st.doors.garage.garage-closed",  /*backgroundColor:"#79b821",*/ nextState: "opening")
 			state("open",    label:'${name}', action:"door control.close",  icon:"st.doors.garage.garage-open",    backgroundColor:"#ffa81e", nextState: "closing")
 			state("opening", label:'${name}', icon:"st.doors.garage.garage-opening", backgroundColor:"#ffe71e", nextState: "open")
 			state("closing", label:'${name}', icon:"st.doors.garage.garage-closing", backgroundColor:"#ffe71e", nextState: "closed")
